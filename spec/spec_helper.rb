@@ -13,9 +13,9 @@ require('./app')
 
   RSpec.configure do |config|
     config.after(:each) do
-      Task.all().each() do |task|
+      Employee.all().each() do |task|
       task.destroy()
-      List.all().each() do |list|
+      Project.all().each() do |list|
         list.destroy()
       end
     end
